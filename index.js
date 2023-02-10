@@ -1,5 +1,5 @@
 const express = require('express');
-var cors = require('cors')
+let cors = require('cors')
 const app = express();
 const {Octokit}=require("@octokit/rest");
 const { asyncHandler } = require("./middleware");
@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
 });
 
 
-// app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(cors({ origin: "https://bitzz.netlify.app", credentials: true }));
 
 
 app.get('/lol', (req, res) => {
