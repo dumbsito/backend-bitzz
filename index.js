@@ -9,7 +9,6 @@ const {
 } = require("@octokit/auth-oauth-app");
 const { Router } = require("express");
 const { encryptToken, decryptToken } = require("./crypto");
-const secret_key="LuBEwq0eXNaPT8kpoQFZYHObmnKGsM93c5IJx2SgCRUlv4Ayd6Vh1zWiD7rtjf"
 const router=Router();
 const clientId = 'a727daaaf35737b322cb';
 const clientSecret = '37f2a8358ed451f294626c6835982ce35a39dfce';
