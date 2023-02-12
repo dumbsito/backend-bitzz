@@ -51,7 +51,7 @@ app.get('/oauth-callback', (req, res) => {
   then((response) => {
     
     access_token = response.data.access_token;
-    res.redirect('http://localhost:4200/dashboard');
+    res.redirect('https://bitzz.netlify.app/dashboard');
  // res.send("<h1>Bien hecho!!</h1>")
   }).
     catch(err => res.status(500).json({ message: err.message }));
@@ -150,7 +150,7 @@ app.get('/oauth-callback', (req, res) => {
 
   app.get("/cb", asyncHandler(async (req, res, next) => {
 
-      res.redirect(`https://localhost:4200`);
+      res.redirect(`https://bitzz.netlify.app`);
     })
   );
 
@@ -178,7 +178,7 @@ app.get('/oauth-callback', (req, res) => {
       });
     
       // redirect user to home page
-      res.redirect(`https://localhost:4200`);
+      res.redirect(`https://bitzz.netlify.app/`);
     })
   
   
