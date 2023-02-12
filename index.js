@@ -2,14 +2,13 @@ const express = require('express');
 let cors = require('cors')
 const app = express();
 const {Octokit}=require("@octokit/rest");
-const { asyncHandler } = require("./middleware");
+
 const {
   createOAuthAppAuth,
   createOAuthUserAuth,
 } = require("@octokit/auth-oauth-app");
-const { Router } = require("express");
-const { encryptToken, decryptToken } = require("./crypto");
-const router=Router();
+
+
 const clientId = 'a727daaaf35737b322cb';
 const clientSecret = '37f2a8358ed451f294626c6835982ce35a39dfce';
 
@@ -148,11 +147,7 @@ app.get('/oauth-callback', (req, res) => {
     })
   });
 
-  app.get("/cb", asyncHandler(async (req, res, next) => {
 
-      res.redirect(`https://bitzz.netlify.app`);
-    })
-  );
 
 
 
@@ -178,7 +173,7 @@ app.get('/oauth-callback', (req, res) => {
       });
     
       // redirect user to home page
-      res.redirect(`https://bitzz.netlify.app/`);
+      res.redirect(`https://bitzz.netlify.app`);
     })
   
   
