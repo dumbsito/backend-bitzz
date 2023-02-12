@@ -173,7 +173,7 @@ app.get('/oauth-callback', (req, res) => {
       });
     
       // redirect user to home page
-      res.redirect(`https://bitzz.netlify.app`);
+      res.redirect(`http://bitzz.netlify.app`);
     })
   
   
